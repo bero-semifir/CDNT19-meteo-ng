@@ -1,0 +1,18 @@
+<div>
+    <div class="meteo-head">
+        <h2>{{ meteo.name | titlecase }}</h2>
+        <img
+            [src]="'https://openweathermap.org/img/wn/' + meteo.weather[0].icon + '@2x.png'"
+            [title]="meteo.weather[0].description"
+        />
+    </div>
+    <h3>{{ meteo.weather[0].description | titlecase }}</h3>
+    <div class="meteo-body">
+        <ul>
+            <li>Température: {{ meteo.main.temp }}°C</li>
+            <li>Minimale: {{ meteo.main.temp_min }}°C</li>
+            <li>Maximale: {{ meteo.main.temp_max }}°C</li>
+            <li>Vent: {{ meteo.wind.speed }}km/h {{ meteo.wind.deg }}°</li>
+        </ul>
+    </div>
+</div>
